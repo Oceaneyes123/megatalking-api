@@ -5,9 +5,6 @@ const cors = require('cors');
 const app = express();
 
 
-// Where we will keep books
-let books = [];
-
 app.use(cors());
 
 // Configuring body parser middleware
@@ -15,7 +12,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json())
 
-
+app.get('/api/next',(req, res) => {
+   
+    res.send("Please use POST request");
+});
 
 app.post('/api/next',(req, res) => {
     const isNext = req.body;
