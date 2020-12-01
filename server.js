@@ -12,12 +12,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json())
 
-app.get('/api/next',(req, res) => {
-   
+app.get('/',(req, res) => {
     res.send("Please use POST request");
 });
 
-app.post('/api/next',(req, res) => {
+app.post('/',(req, res) => {
     const isNext = req.body;
     res.send(isNext);
 });
